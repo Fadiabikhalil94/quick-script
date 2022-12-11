@@ -1,4 +1,3 @@
-import * as vscode from 'vscode';
 import {
   window,
   Disposable,
@@ -6,6 +5,7 @@ import {
   StatusBarAlignment,
   tasks,
   Task,
+  commands,
 } from "vscode";
 // This method is called when your extension is activated. Activation is
 // controlled by the activation events defined in package.json.
@@ -33,9 +33,9 @@ class QuickScript {
         // Add an event listener to run the task when the button is clicked
         itm.command = `quickscript${idx}.runTask`;
         // Register a command to run the task
-        vscode.commands.registerCommand(`quickscript${idx}.runTask`, function () {
+        commands.registerCommand(`quickscript${idx}.runTask`, function () {
           // Run the task here
-          vscode.tasks.executeTask(tsk);
+          tasks.executeTask(tsk);
         });
         // itm.command = vscode.commands.executeCommand("workbench.action.tasks.runTask", tsk.name);
         itm.tooltip = 'run';
