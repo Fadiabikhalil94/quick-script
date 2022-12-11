@@ -3,6 +3,7 @@
   "displayName": "Quick Script",
   "description": "Quick script helps you quickly run all your node projects with a quick command shortcut",
   "version": "0.0.1",
+  "repository": "https://github.com/Fadiabikhalil94/quick-script",
   "engines": {
     "vscode": "^1.54.0"
   },
